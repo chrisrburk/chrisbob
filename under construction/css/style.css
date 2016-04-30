@@ -201,7 +201,16 @@ body, html {
   display: block;
   width: 100%;
   max-width: 700px;
-  margin: 100px auto; }
+  margin:2% auto; }
+  .home-banner h1 {
+    font-size: 4em;
+    line-height: 1.2em;
+    font-family: sans-serif;
+    color: #EBF4F7;
+    text-shadow: 4px 4px 0px rgba(0, 91, 76, 0.41);
+    text-transform: uppercase;
+    margin: 1% 0;
+  }
   .home-banner #drop {
     position: relative;
     -webkit-animation: dripping 4s infinite ease-in both;
@@ -252,4 +261,4 @@ body, html {
     -moz-animation: ripple 4s infinite ease-in both;
     animation: ripple 4s infinite ease-in both;
     animation-delay: 3.9s;
-    transform-origin: 50% 0%; }  
+    transform-origin: 50% 0%; }
