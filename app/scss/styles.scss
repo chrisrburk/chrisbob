@@ -3,13 +3,18 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Box-sizing border-box */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 // STYLES
-.screen-nav{display: none;height:0px;}
+.screen-nav {
+  display: none;
+  height:0px;
+}
 #main {
-    background: #282828;
-    border: 1px solid #646464;
+  background: #282828;
+  border: 1px solid #646464;
 }
