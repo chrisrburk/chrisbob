@@ -1,20 +1,39 @@
-// RESET
+// BASE
 body {
     margin: 0;
     padding: 0;
+    background: #282828;
 }
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-// STYLES
-.screen-nav {
-  display: none;
-  height:0px;
+header{
+  display: flex;
 }
+
+
+
+
+//MODULES
+
+
+
+
+
+
+// COMPONENTS
 #main {
-  background: #282828;
   border: 1px solid #646464;
+  max-width: 630px;
+  margin: 0 auto;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
 }
