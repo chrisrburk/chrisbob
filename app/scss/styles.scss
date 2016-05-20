@@ -51,9 +51,8 @@ header{
 /* Header */
 #main {
   border: 1px solid #646464;
-  min-width: 630px;
-  width: 50vw;
-  max-width: 800px;
+  width: 100vw;
+  max-width: 640px;
   margin: 0 auto;
   background: ghostwhite;
 }
@@ -66,12 +65,10 @@ header{
   width: 66.98%;
   div,
   nav{
-    // border: 1px solid honeydew;
-    //REMOVE??
-    min-height: 59px;
+
   }
   div{
-    padding: .5em 1em;
+    display: flex;
   }
   .name {background: #353535;}
   .title{background: #2b2b2b;}
@@ -85,30 +82,21 @@ header{
     font-size: 20px;
   }
   .name a:after{
-    background: #000;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
     content:"\e914";
   }
   .title a{
     font-size: 13px;
   }
   .title a:after{
-    background: #000;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
     content: "\f0e1";
   }
   nav{
     display: flex;
-    justify-content: space-around;
     a{
       color: white;
       font-family: Avenir Next Condensed, Open Sans Condensed, sans-serif;
       text-transform: uppercase;
-      width:16.6666%;
+      flex:1;
       text-align: center;
       font-size: 12px;
       padding: .9em .5em;

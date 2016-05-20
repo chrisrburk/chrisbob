@@ -39,9 +39,8 @@ header {
 /* Header */
 #main {
   border: 1px solid #646464;
-  min-width: 630px;
-  width: 50vw;
-  max-width: 800px;
+  width: 100vw;
+  max-width: 640px;
   margin: 0 auto;
   background: ghostwhite; }
 
@@ -52,11 +51,8 @@ header {
   display: flex;
   flex-direction: column;
   width: 66.98%; }
-  .links div,
-  .links nav {
-    min-height: 59px; }
   .links div {
-    padding: .5em 1em; }
+    display: flex; }
   .links .name {
     background: #353535; }
   .links .title {
@@ -69,27 +65,18 @@ header {
   .links .name a {
     font-size: 20px; }
   .links .name a:after {
-    background: #000;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
     content: "\e914"; }
   .links .title a {
     font-size: 13px; }
   .links .title a:after {
-    background: #000;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
     content: "\f0e1"; }
   .links nav {
-    display: flex;
-    justify-content: space-around; }
+    display: flex; }
     .links nav a {
       color: white;
       font-family: Avenir Next Condensed, Open Sans Condensed, sans-serif;
       text-transform: uppercase;
-      width: 16.6666%;
+      flex: 1;
       text-align: center;
       font-size: 12px;
       padding: .9em .5em; }
