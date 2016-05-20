@@ -1,39 +1,145 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?s2ap61');
+    src:    url('fonts/icomoon.eot?s2ap61#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?s2ap61') format('truetype'),
+        url('fonts/icomoon.woff?s2ap61') format('woff'),
+        url('fonts/icomoon.svg?s2ap61#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], .name a:after, .title a:after, nav a:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 // BASE
 body {
     margin: 0;
     padding: 0;
     background: #282828;
+    font-family: Avenir Next, Open Sans, sans-serif;
 }
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-header{
-  display: flex;
-}
-
-
-
+a{text-decoration: none;}
 
 //MODULES
-
-
-
-
+header{
+  display: flex;
+  border: 1px solid goldenrod;
+  // flex-wrap: wrap;
+}
 
 
 // COMPONENTS
+
+/* Header */
 #main {
   border: 1px solid #646464;
-  max-width: 630px;
+  min-width: 630px;
+  width: 50vw;
+  max-width: 800px;
   margin: 0 auto;
+  background: ghostwhite;
+}
+.headshot {
+  width: 33.02%;
 }
 .links {
-    display: flex;
-    flex-direction: column;
-}
-nav{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  width: 66.98%;
+  div,
+  nav{
+    // border: 1px solid honeydew;
+    //REMOVE??
+    min-height: 59px;
+  }
+  div{
+    padding: .5em 1em;
+  }
+  .name {background: #353535;}
+  .title{background: #2b2b2b;}
+  .name a,
+  .title a{
+    font-family: Avenir Next, Open Sans, sans-serif;
+    color: #8b8b8b;
+    text-transform: uppercase;
+  }
+  .name a{
+    font-size: 20px;
+  }
+  .name a:after{
+    background: #000;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content:"\e914";
+  }
+  .title a{
+    font-size: 13px;
+  }
+  .title a:after{
+    background: #000;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "\f0e1";
+  }
+  nav{
+    display: flex;
+    justify-content: space-around;
+    a{
+      color: white;
+      font-family: Avenir Next Condensed, Open Sans Condensed, sans-serif;
+      text-transform: uppercase;
+      width:16.6666%;
+      text-align: center;
+      font-size: 12px;
+      padding: .9em .5em;
+    }
+    a:hover{
+      opacity: .85;
+    }
+    a:before{
+      display: block;
+      margin:0 auto .2em auto;
+      font-size: 22px;
+    }
+    .home {background-color:#00bd9c;}
+    .home:before{content:"\e153";}
+    .resume {background-color:#2b97de;}
+    .resume:before{content:"\e90f";}
+    .portfolio {background-color:#9c55b8;}
+    .portfolio:before{content:"\e903";}
+    .contacts {background-color:#e87e02;}
+    .contacts:before{content:"\e900";}
+    .feedback {background-color:#e94b35;}
+    .feedback:before{content:"\e912";}
+    .blog {background-color:#daa900;}
+    .blog:before{content:"\e913";}
+  }
+}
+
+
+
+
+
+.class{
+  border:1px solid blanchedalmond;
 }
