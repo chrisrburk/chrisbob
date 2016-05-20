@@ -15,7 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 //Sass complie function
 gulp.task('sass', function(){
   return gulp.src('app/scss/**/*.scss')
-    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
