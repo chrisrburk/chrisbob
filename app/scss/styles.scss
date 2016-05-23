@@ -72,8 +72,8 @@ header{
     display: flex;
   }
 }
-.name {background: #353535;padding:0 1.2em;}
-.title{background: #2b2b2b;padding:0 1.2em;}
+.name {background: #353535;padding:0 0 0 1.2em;}
+.title{background: #2b2b2b;padding:0 0 0 1.2em;}
 .name a,
 .title a{
   font-family: Avenir Next, Open Sans, sans-serif;
@@ -87,11 +87,18 @@ header{
 .name a{
   font-size: 20px;
 }
-.name a:after{
-  content:"\e914";
-}
 .title a{
   font-size: 13px;
+}
+.name a:after,
+.title a:after{
+  height: 100%;
+  width: 17%;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+}
+.name a:after{
+  content:"\e914";
 }
 .title a:after{
   content: "\f0e1";
