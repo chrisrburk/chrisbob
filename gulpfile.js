@@ -14,27 +14,27 @@ var autoprefixer = require('gulp-autoprefixer');
 
 //Sass complie function
 gulp.task('sass', function(){
-  return gulp.src('app/scss/**/*.scss')
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
-//Load app into live browser
+//Load src into live browser
 gulp.task('load-browser', function() {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: 'src'
     },
   })
 })
 
 //Concat/minify all files into on master file in dist
 gulp.task('useref', function(){
-  return gulp.src('app/*.html')
+  return gulp.src('src/*.html')
     .pipe(useref())
     // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
@@ -45,7 +45,7 @@ gulp.task('useref', function(){
 
 //Optimize images
 gulp.task('images', function(){
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
   .pipe(cache(imagemin({
       interlaced: true
@@ -60,7 +60,7 @@ return cache.clearAll(callback)
 
 //Move fonts from dev to dist
 gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
+  return gulp.src('src/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
 })
 
@@ -71,10 +71,10 @@ gulp.task('clean:dist', function() {
 
 //Main watch function which complies sass and launches a browser
 gulp.task('watch', ['load-browser','sass'], function(){
-  gulp.watch('app/scss/**/*.scss', ['sass']);
+  gulp.watch('src/scss/**/*.scss', ['sass']);
   // Reloads the browser whenever HTML or JS files change
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('src/js/**/*.js', browserSync.reload);
 })
 
 gulp.task('default', function (callback) {
