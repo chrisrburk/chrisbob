@@ -27,7 +27,7 @@ gulp.task('sass', function(){
 gulp.task('load-browser', function() {
   browserSync.init({
     server: {
-      baseDir: 'src'
+      baseDir: 'parallax'
     },
   })
 })
