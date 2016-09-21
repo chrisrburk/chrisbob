@@ -24,10 +24,19 @@ gulp.task('sass', function(){
 });
 
 //Load src into live browser
-gulp.task('load-browser', function() {
+gulp.task('load-src', function() {
   browserSync.init({
     server: {
-      baseDir: 'parallax'
+      baseDir: 'src'
+    },
+  })
+})
+
+//Load dist into live browser
+gulp.task('load-dist', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'dist'
     },
   })
 })
@@ -70,7 +79,7 @@ gulp.task('clean:dist', function() {
 })
 
 //Main watch function which complies sass and launches a browser
-gulp.task('watch', ['load-browser','sass'], function(){
+gulp.task('watch', ['load-src','sass'], function(){
   gulp.watch('src/scss/**/*.scss', ['sass']);
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('src/*.html', browserSync.reload);
@@ -78,14 +87,14 @@ gulp.task('watch', ['load-browser','sass'], function(){
 })
 
 gulp.task('default', function (callback) {
-  runSequence(['sass','load-browser', 'watch'],
+  runSequence(['sass','load-src', 'watch'],
     callback
   )
 })
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+    ['sass', 'useref', 'images', 'fonts', 'load-dist'],
     callback
   )
 })
