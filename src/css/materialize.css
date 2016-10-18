@@ -4466,6 +4466,10 @@ small {
   font-weight: 200;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .flow-text {
   font-weight: 300;
 }
