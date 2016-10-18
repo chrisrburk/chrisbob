@@ -6,6 +6,19 @@
 
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
+//Custom colors
+$slate: (
+  "base":       #55607D,
+  "lighten-5":  #8394C2,
+  "lighten-4":  #7382AB,
+  "lighten-3":  #677497,
+  "lighten-2":  #5C6887,
+  "lighten-1":  #545F7B,
+  "darken-1":   #48526B,
+  "darken-2":   #3C4459,
+  "darken-3":   #343B4D,
+  "darken-4":   #363D50
+);
 
 $materialize-red: (
   "base":       #e51c23,
@@ -357,6 +370,7 @@ $colors: (
   "deep-orange": $deep-orange,
   "brown": $brown,
   "blue-grey": $blue-grey,
+  "slate": $slate,
   "grey": $grey,
   "shades": $shades
 );
@@ -409,4 +423,3 @@ $colors: (
   @warn "Unknown `#{name}` in $colors.";
   @return null;
 }
-

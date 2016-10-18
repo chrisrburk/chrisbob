@@ -114,7 +114,8 @@ nav {
       }
 
       &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: $primary-color;
+        color:white;
       }
     }
 
