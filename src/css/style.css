@@ -103,6 +103,45 @@ p {
   font-size: inherit;
 }
 
+.icon-design {
+  width: 5rem;
+}
+
+.icon-ux {
+  background: url(../images/userx.svg) no-repeat;
+}
+
+.icon-develop {
+  background: url(../images/develop.svg) no-repeat;
+}
+
+#whatido {
+  background: url(../images/noisy_grid_@2X.png) repeat;
+}
+
+footer {
+  background: url(../images/footer-gradient.png) bottom center repeat-x;
+}
+
 footer.page-footer {
   margin: 0;
+}
+
+footer #social-list a {
+  background: rgba(0, 0, 0, 0.87);
+  width: 100%;
+  font-size: 2rem;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  padding: 1.3rem 0;
+}
+
+footer #social-list a:hover {
+  background: #55607D;
+}
+
+.footer-copyright {
+  background: url(../images/mountains.png) bottom center repeat-x !important;
+  min-height: 25rem;
 }
