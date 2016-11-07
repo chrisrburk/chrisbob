@@ -25,7 +25,7 @@
             url: $(form).attr('action'),
             data: formData
         }).done(function(response) {
-
+          console.log('AJAX done!');
           // Make sure that the formMessages div has the 'success' class.
           $(formMessages).removeClass('error');
           $(formMessages).addClass('success');
@@ -38,7 +38,7 @@
           $('#email').val('');
           $('#message').val('');
         }).fail(function(data) {
-          
+            console.log('AJAX Failed :(');
             // Make sure that the formMessages div has the 'error' class.
             $(formMessages).removeClass('success');
             $(formMessages).addClass('error');
