@@ -34,6 +34,7 @@
   animation-iteration-count: 1;
 }
 
+
 nav {
   ul {
     a{
@@ -108,9 +109,34 @@ p {
   background: url(../images/noisy_grid_@2X.png) repeat;
 }
 
+//FORM
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  border-radius: 4px;
+}
+
 // FOOTER
 footer{
   background: url(../images/footer-gradient.png) bottom center repeat-x;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(85,96,125,0.5) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(85,96,125,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(85,96,125,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#55607d',GradientType=0 );
   &.page-footer {
     margin: 0;
   }
