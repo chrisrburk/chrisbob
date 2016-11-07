@@ -120,32 +120,29 @@
   <footer id="hireme" class="page-footer white">
     <div class="container">
       <div class="row">
-        <form class="col l6 s12">
+        <form id="ajax-contact" class="col l6 s12" method="post" action="frm_handlr.php">
           <div class="row">
             <div class="col s12">
               <h5>Contact Me</h5>
               <p>ALWAYS INTERESTED IN NEW PROJECTS, JUST SEND ME AN EMAIL AND I'LL GET BACK TO YOUR INQUIRY ASAP.</p>
             </div>
           </div>
+          <div id="form-messages"></div>
           <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
+            <div class="input-field col s12">
+              <input id="name" name="name" type="text" class="validate" required>
+              <label for="first_name">Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
+              <input id="email" name="email" type="email" class="validate" required>
               <label for="email">Email</label>
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="input-field col s12">
-              <select>
+              <select id="option" name="option" class="validate" required>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -153,11 +150,11 @@
               </select>
               <label>Materialize Select</label>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Textarea</label>
+              <textarea id="message" name="message" class="materialize-textarea"></textarea>
+              <label for="message">Additional Comments...</label>
             </div>
           </div>
           <div class="row">
@@ -177,7 +174,7 @@
             </div>
           </div>
           <div id="social-list" class="row">
-            <div class="col s3"><a href="https://www.facebook.com/chrisburk" class="facebook"><i class="fa fa-facebook"></i></a></div>
+            <div class="col s3"><a href="https://www.facebook.com/chrisburkdesign/" class="facebook"><i class="fa fa-facebook"></i></a></div>
             <div class="col s3"><a href="https://twitter.com/chrisburkdesign" class="twitter"><i class="fa fa-twitter"></i></a></div>
             <div class="col s3"><a href="https://www.linkedin.com/in/chrisrburk" class="linkedin"><i class="fa fa-linkedin"></i></a></div>
             <div class="col s3"><a href="https://www.instagram.com/chrisburkdesign/" class="instagram"><i class="fa fa-instagram"></i></a></div>
