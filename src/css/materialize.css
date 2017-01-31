@@ -4267,9 +4267,10 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
   margin-right: 15px;
 }
 
-nav ul a:hover {
+nav ul a:hover, nav ul a.active {
   background-color: #55607D;
-  color: white;
+  color: white !important;
+  border: 0 !important;
 }
 
 nav ul.left {
@@ -6893,12 +6894,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 .table-of-contents a {
   display: inline-block;
-  font-weight: 300;
-  color: #757575;
-  padding-left: 20px;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  letter-spacing: .4;
   display: inline-block;
 }
 

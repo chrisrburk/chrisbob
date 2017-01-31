@@ -4,6 +4,7 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
     $('select').material_select();
+    $('.scrollspy').scrollSpy();
 
     // Get the form.
     var form = $('#ajax-contact');

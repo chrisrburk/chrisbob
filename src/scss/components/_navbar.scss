@@ -113,9 +113,11 @@ nav {
         margin-right: 15px;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         background-color: $primary-color;
-        color:white;
+        color: white !important;
+        border: 0 !important;
       }
     }
 
