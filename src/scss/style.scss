@@ -67,25 +67,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
   color: rgba(255,255,255,.9);
-  .section {
-    width: 100%;
-    @media only screen and (max-width : 992px) {
-      position: absolute;
-      top: 40%;
-      &#index-banner .section{
-          top: 10%;
-      }
-    }
-  }
-  @media only screen and (max-width : 600px) {
-     .section{
-        top: 0;
-    }
-  }
 }
 // ICONS
 .icon-block {
