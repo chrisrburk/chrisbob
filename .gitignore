@@ -1,5 +1,4 @@
 .DS_Store
-.sass-cache
 *.jpg
 *.jpeg
 *.png
@@ -10,4 +9,3 @@ images/
 img/
 mocks
 node_modules
-icomoon/
