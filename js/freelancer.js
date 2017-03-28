@@ -19,7 +19,7 @@
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
+    $('.navbar-collapse ul li a').click(function(){
             $('.navbar-toggle:visible').click();
     });
 
@@ -38,6 +38,23 @@
             $(this).addClass("floating-label-form-group-with-focus");
         }).on("blur", ".floating-label-form-group", function() {
             $(this).removeClass("floating-label-form-group-with-focus");
+        });
+    });
+
+    // Hide #mainNav
+    $("#mainNav").hide();
+
+    // Fade in #mainNav
+    $(function () {
+        $(window).scroll(function () {
+
+          // set distance user needs to scroll before we start fadeIn
+          if ($(this).scrollTop() > 400) {
+              $('#mainNav').fadeIn();
+          } else {
+              $('#mainNav').fadeOut();
+          }
+
         });
     });
 
