@@ -68,8 +68,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #00BCD4;
-  background: url(../img/galaxy-blue.jpg);
+  background: #00BCD4 url(../img/galaxy-blue.jpg);
   background-size: cover;
   color: white;
 }
@@ -105,7 +104,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #8BC34A;
+  background: linear-gradient(to left, #00BCD4, #8BC34A);
   font-family: "Catamaran", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -136,13 +135,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #00BCD4;
+  background: #8BC34A;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #00BCD4;
+  background: #8BC34A;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -300,14 +299,17 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #8BC34A;
+  background: linear-gradient(to top, #00BCD4, #8BC34A);
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #7eb73d;
+  background: #00BCD4;
+}
+footer .footer-below a {
+  color: #a4d070;
 }
 .btn-outline {
   color: white;
