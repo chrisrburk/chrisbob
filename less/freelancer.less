@@ -74,6 +74,8 @@ hr.star-primary:after {
 header {
 	text-align: center;
 	background: @theme-success;
+	background: url(../img/galaxy-blue.jpg) ;
+	background-size: cover;
 	color: white;
 	.container {
 		padding-top: 100px;
@@ -101,7 +103,7 @@ header {
 @media(min-width:768px) {
 	header {
 		.container {
-			padding-top: 200px;
+			padding-top: 100px;
 			padding-bottom: 100px;
 		}
 		.intro-text {
@@ -117,11 +119,12 @@ header {
 
 .navbar-custom {
 	background: @theme-primary;
-	font-family: @font-hand;
+	font-family: @font-sans;
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
 	.navbar-brand {
+		font-family: @font-hand;
 		color: white;
 		&:hover,
 		&:focus,
