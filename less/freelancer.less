@@ -73,8 +73,7 @@ hr.star-primary:after {
 
 header {
 	text-align: center;
-	background: @theme-success;
-	background: url(../img/galaxy-blue.jpg) ;
+	background: @theme-success url(../img/galaxy-blue.jpg);
 	background-size: cover;
 	color: white;
 	.container {
@@ -118,7 +117,7 @@ header {
 }
 
 .navbar-custom {
-	background: @theme-primary;
+	background: @gradient-left;
 	font-family: @font-sans;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -149,12 +148,12 @@ header {
 			&.active {
 				a {
 					color: white;
-					background: @theme-success;
+					background: @theme-primary;
 					&:hover,
 					&:focus,
 					&:active {
 						color: white;
-						background: @theme-success;
+						background: @theme-primary;
 					}
 				}
 			}
@@ -335,14 +334,17 @@ footer {
 	}
 	.footer-above {
 		padding-top: 50px;
-		background-color: @theme-primary;
+		background: @gradient-top;
 	}
 	.footer-col {
 		margin-bottom: 50px;
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@theme-primary, 5%);
+		background: @theme-success;
+		a{
+			color: lighten(@theme-primary, 10%);
+		}
 	}
 }
 
