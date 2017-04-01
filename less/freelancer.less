@@ -29,7 +29,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr.star-light,
-hr.star-primary {
+hr.star-primary,
+hr.star-success {
     padding: 0;
     border: none;
     border-top: solid 5px;
@@ -39,7 +40,8 @@ hr.star-primary {
 }
 
 hr.star-light:after,
-hr.star-primary:after {
+hr.star-primary:after,
+hr.star-success:after {
     content: "\f005";
     font-family: FontAwesome;
     display: inline-block;
@@ -66,11 +68,34 @@ hr.star-primary:after {
     background-color: white;
     color: @theme-primary;
 }
+hr.star-success {
+    border-color: @theme-success;
+}
+
+hr.star-success:after {
+    background-color: white;
+    color: @theme-success;
+}
 
 .img-centered {
 	margin: 0 auto;
 }
 
+.text-success{
+	color: @theme-success;
+}
+.bg-success{
+	background-color: @theme-success;
+}
+.text-primary{
+	color: @theme-primary;
+}
+.bg-primary{
+	background-color: @theme-primary;
+}
+.bg-gradient-bot{
+	background: @gradient-bottom;
+}
 header {
 	text-align: center;
 	background: @theme-success url(../img/galaxy-blue.jpg);
@@ -122,14 +147,21 @@ header {
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
+	display:none;
 	.navbar-brand {
 		font-family: @font-hand;
 		color: white;
+		height: auto;
 		&:hover,
 		&:focus,
 		&:active,
 		&.active {
 			color: white;
+		}
+		.logo-img{
+			width: 20px;
+			display: inline-block;
+
 		}
 	}
 	.navbar-nav {
@@ -189,7 +221,7 @@ header {
     .navbar-custom.affix {
         padding: 10px 0;
 		.navbar-brand {
-	        font-size: 1.5em;
+	        font-size: 1.3em;
 	    }
 	}
 }
@@ -414,12 +446,18 @@ footer {
 	    min-height: 100%;
 	    padding: 100px 0;
 	    text-align: center;
+			color: white;
+			background: @gradient-bottom;
 		h2 {
 	    	margin: 0;
 	    	font-size: 3em;
 		}
 		img {
 			margin-bottom: 30px;
+		}
+		a,
+		strong{
+			color: darken(@theme-success, 20%);
 		}
 		.item-details {
 			margin: 30px 0;
@@ -438,9 +476,9 @@ footer {
         }
         .lr {
             height:75px;
-            width:1px;
+            width:4px;
             margin-left:35px;
-            background-color:@theme-primary;
+            background-color:white;
             transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             /* IE 9 */
@@ -449,8 +487,8 @@ footer {
             z-index:1051;
             .rl {
                 height:75px;
-                width:1px;
-                background-color:@theme-primary;
+                width:4px;
+                background-color:white;
                 transform: rotate(90deg);
                 -ms-transform: rotate(90deg);
                 /* IE 9 */

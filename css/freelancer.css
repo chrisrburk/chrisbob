@@ -31,7 +31,8 @@ h6 {
   font-weight: 700;
 }
 hr.star-light,
-hr.star-primary {
+hr.star-primary,
+hr.star-success {
   padding: 0;
   border: none;
   border-top: solid 5px;
@@ -40,7 +41,8 @@ hr.star-primary {
   margin: 25px auto 30px;
 }
 hr.star-light:after,
-hr.star-primary:after {
+hr.star-primary:after,
+hr.star-success:after {
   content: "\f005";
   font-family: FontAwesome;
   display: inline-block;
@@ -63,8 +65,30 @@ hr.star-primary:after {
   background-color: white;
   color: #8BC34A;
 }
+hr.star-success {
+  border-color: #00BCD4;
+}
+hr.star-success:after {
+  background-color: white;
+  color: #00BCD4;
+}
 .img-centered {
   margin: 0 auto;
+}
+.text-success {
+  color: #00BCD4;
+}
+.bg-success {
+  background-color: #00BCD4;
+}
+.text-primary {
+  color: #8BC34A;
+}
+.bg-primary {
+  background-color: #8BC34A;
+}
+.bg-gradient-bot {
+  background: linear-gradient(to top, #8BC34A, #00BCD4);
 }
 header {
   text-align: center;
@@ -109,16 +133,22 @@ header .intro-text .skills {
   text-transform: uppercase;
   font-weight: 700;
   border: none;
+  display: none;
 }
 .navbar-custom .navbar-brand {
   font-family: 'Rock Salt', cursive;
   color: white;
+  height: auto;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
   color: white;
+}
+.navbar-custom .navbar-brand .logo-img {
+  width: 20px;
+  display: inline-block;
 }
 .navbar-custom .navbar-nav {
   letter-spacing: 1px;
@@ -172,7 +202,7 @@ header .intro-text .skills {
     padding: 10px 0;
   }
   .navbar-custom.affix .navbar-brand {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 section {
@@ -445,6 +475,8 @@ fieldset[disabled] .btn-success.active {
   min-height: 100%;
   padding: 100px 0;
   text-align: center;
+  color: white;
+  background: linear-gradient(to top, #8BC34A, #00BCD4);
 }
 .portfolio-modal .modal-content h2 {
   margin: 0;
@@ -452,6 +484,10 @@ fieldset[disabled] .btn-success.active {
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
+}
+.portfolio-modal .modal-content a,
+.portfolio-modal .modal-content strong {
+  color: #00626e;
 }
 .portfolio-modal .modal-content .item-details {
   margin: 30px 0;
@@ -470,9 +506,9 @@ fieldset[disabled] .btn-success.active {
 }
 .portfolio-modal .close-modal .lr {
   height: 75px;
-  width: 1px;
+  width: 4px;
   margin-left: 35px;
-  background-color: #8BC34A;
+  background-color: white;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -482,8 +518,8 @@ fieldset[disabled] .btn-success.active {
 }
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
-  width: 1px;
-  background-color: #8BC34A;
+  width: 4px;
+  background-color: white;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */
