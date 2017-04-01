@@ -41,8 +41,6 @@
         });
     });
 
-    // Hide #mainNav
-    $("#mainNav").hide();
 
     // Fade in #mainNav
     $(function () {
